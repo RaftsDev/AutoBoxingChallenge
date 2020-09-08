@@ -22,20 +22,25 @@ package com.company;
 // e.g. check if exists, or does not exist, etc.
 // Think about where you are adding the code to perform certain actions
 
+import java.util.Scanner;
+
 public class Main {
+
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
         boolean quit = false;
         while(!quit){
 
-            printOptions();
+            int action = printOptions();
+            System.out.println("action:"+action);
 
             quit = true;//just for test
         }
     }
 
-    private static void printOptions(){
+    private static int printOptions(){
         System.out.println("----------- List of available options --------");
         System.out.println("0 - create a Bank\n" +
                 "1 - create a Branch\n" +
@@ -46,5 +51,8 @@ public class Main {
                 "6 - Show a Customers of Branch\n" +
                 "7 - Show a Customers of Branch w transactions\n" +
                 "8 - Exit of application");
+        int action = scanner.nextInt();
+        scanner.nextLine();
+        return action;
     }
 }
