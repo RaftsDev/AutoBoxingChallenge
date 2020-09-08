@@ -1,16 +1,16 @@
 package com.company;
 
 // You job is to create a simple banking application.
-// There should be a Bank class
+// There should be a com.company.Bank class
 // It should have an arraylist of Branches
-// Each Branch should have an arraylist of Customers
+// Each com.company.Branch should have an arraylist of Customers
 // The Customer class should have an arraylist of Doubles (transactions)
 // Customer:
 // Name, and the ArrayList of doubles.
-// Branch:
+// com.company.Branch:
 // Need to be able to add a new customer and initial transaction amount.
 // Also needs to add additional transactions for that customer/branch
-// Bank:
+// com.company.Bank:
 // Add a new branch
 // Add a customer to that branch with initial transaction
 // Add a transaction for an existing customer for that branch
