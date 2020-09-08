@@ -28,16 +28,16 @@ public class Main {
 
         boolean quit = false;
         while(!quit){
-            System.out.println("---------------");
-            System.out.println("0 - create a Bank"/n
-                              +"1 - create a Branch"/n
-                              +"2 - create a Customer"/n
-                              +"3 - create a Transaction of customer"/n
-                              +"4 - Show a Bank"/n
-                              +"5 - Show a Branches"/n
-                              +"6 - Show a Customers of Branch"/n
-                              +"7 - Show a Customers of Branch w transactions"/n
-                              +"8 - Exit of application");
+            System.out.println("----------- List of available options --------");
+            System.out.println("0 - create a Bank\n" +
+                               "1 - create a Branch\n" +
+                               "2 - create a Customer\n" +
+                               "3 - create a Transaction of customer\n" +
+                               "4 - Show a Bank\n" +
+                               "5 - Show a Branches\n" +
+                               "6 - Show a Customers of Branch\n" +
+                               "7 - Show a Customers of Branch w transactions\n" +
+                               "8 - Exit of application");
             quit = true;//just for test
         }
     }
