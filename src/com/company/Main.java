@@ -45,6 +45,7 @@ public class Main {
                             "type the name of branch:");
                     String name = scanner.nextLine();
                     Branch branchName = Branch.createBranch(name, bankName);
+                    bankName.addBranch(branchName);
                     break;
                 case 1://create a Customer
 
@@ -55,7 +56,7 @@ public class Main {
                 case 3://Show branches
                     System.out.println("You branches:");
                     ArrayList<Branch> branches = bankName.getBranches();
-                    System.out.println(branches.get(0));
+                    System.out.println("toString:"+branches.get(0).toString());
                     for (int i = 0; i < branches.size(); i++){
                         System.out.println(i+": "+branches.get(i).toString());
                     }
