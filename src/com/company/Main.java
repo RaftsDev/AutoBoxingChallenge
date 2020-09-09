@@ -30,6 +30,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Bank bankName = Bank.createBank("Nice bank");
+
         boolean quit = false;
         while(!quit){
 
@@ -37,14 +39,14 @@ public class Main {
             System.out.println("action:"+action);
 
             switch(action){
-                case 0://Create a bank
-                    System.out.println("You want to create a bank\n" +
-                            "type the name of bank:");
-                    String name = scanner.nextLine();
-                    Bank.createBank(name);
+                case 0://create a Branch
+                    System.out.println("You want to create a branch\n" +
+                            "type the name of branch:");
+                    name = scanner.nextLine();
+                    Branch branchName = Branch.createBranch(name, bankName);
                     break;
-                case 1:
-                    System.out.println("You pressed 1");
+                case 1://create a Customer
+
                     break;
                 case 2:
                     System.out.println("You pressed 2");
@@ -76,15 +78,14 @@ public class Main {
 
     private static int printOptions(){
         System.out.println("----------- List of available options --------");
-        System.out.println("0 - create a Bank\n" +
-                "1 - create a Branch\n" +
-                "2 - create a Customer\n" +
-                "3 - create a Transaction of customer\n" +
-                "4 - Show a Bank\n" +
-                "5 - Show a Branches\n" +
-                "6 - Show a Customers of Branch\n" +
-                "7 - Show a Customers of Branch w transactions\n" +
-                "8 - Exit of application");
+        System.out.println("0 - create a Branch\n" +
+                "1 - create a Customer\n" +
+                "2 - create a Transaction of customer\n" +
+                "3 - Show a Branches\n" +
+                "4 - Show a Customers of Branch\n"+
+                "5 - Show a Customers of Branch w transactions\n"+
+                "6 - Exit of application");
+
         int action = scanner.nextInt();
         scanner.nextLine();
         return action;

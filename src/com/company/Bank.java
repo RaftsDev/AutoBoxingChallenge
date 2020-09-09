@@ -10,7 +10,7 @@ public class Bank {
         this.name = name;
     }
 
-    public static void createBank(String name){
-        Bank bank = new Bank(name);
+    public static Bank createBank(String name){
+        return new Bank(name);
     }
 }
