@@ -56,9 +56,9 @@ public class Main {
                 case 3://Show branches
                     System.out.println("You branches:");
                     ArrayList<Branch> branches = bankName.getBranches();
-                    System.out.println("toString:"+branches.get(0).toString());
+                    //System.out.println("toString:"+branches.get(0).getName());
                     for (int i = 0; i < branches.size(); i++){
-                        System.out.println(i+": "+branches.get(i).toString());
+                        System.out.println(i+": "+branches.get(i).getName());
                     }
                     break;
                 case 4:

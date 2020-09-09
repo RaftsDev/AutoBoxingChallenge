@@ -15,4 +15,8 @@ public class Branch {
     public static Branch createBranch(String name, Bank bankName){
         return new Branch(name, bankName);
     }
+
+    public String getName() {
+        return name;
+    }
 }
