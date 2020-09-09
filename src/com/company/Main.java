@@ -37,8 +37,11 @@ public class Main {
             System.out.println("action:"+action);
 
             switch(action){
-                case 0:
-                    System.out.println("You pressed 0");
+                case 0://Create a bank
+                    System.out.println("You want to create a bank\n" +
+                            "type the name of bank:");
+                    String name = scanner.nextLine();
+                    Bank.createBank(name);
                     break;
                 case 1:
                     System.out.println("You pressed 1");
