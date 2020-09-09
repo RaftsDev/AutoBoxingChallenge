@@ -42,7 +42,7 @@ public class Main {
                 case 0://create a Branch
                     System.out.println("You want to create a branch\n" +
                             "type the name of branch:");
-                    name = scanner.nextLine();
+                    String name = scanner.nextLine();
                     Branch branchName = Branch.createBranch(name, bankName);
                     break;
                 case 1://create a Customer
@@ -51,8 +51,9 @@ public class Main {
                 case 2:
                     System.out.println("You pressed 2");
                     break;
-                case 3:
-                    System.out.println("You pressed 3");
+                case 3://Show branches
+                    System.out.println("You branches:");
+                    System.out.println(bankName.getBranches().toString());
                     break;
                 case 4:
                     System.out.println("You pressed 4");
@@ -62,12 +63,6 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("You pressed 6");
-                    break;
-                case 7:
-                    System.out.println("You pressed 7");
-                    break;
-                case 8:
-                    System.out.println("You pressed 8");
                     quit = true;
                     break;
             }
