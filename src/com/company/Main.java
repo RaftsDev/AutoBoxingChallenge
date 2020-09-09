@@ -22,6 +22,7 @@ package com.company;
 // e.g. check if exists, or does not exist, etc.
 // Think about where you are adding the code to perform certain actions
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -53,7 +54,11 @@ public class Main {
                     break;
                 case 3://Show branches
                     System.out.println("You branches:");
-                    System.out.println(bankName.getBranches().toString());
+                    ArrayList<Branch> branches = bankName.getBranches();
+                    System.out.println(branches.get(0));
+                    for (int i = 0; i < branches.size(); i++){
+                        System.out.println(i+": "+branches.get(i).toString());
+                    }
                     break;
                 case 4:
                     System.out.println("You pressed 4");

@@ -20,6 +20,7 @@ public class Bank {
     }
 
     public ArrayList<Branch> getBranches() {
+
         return branches;
     }
 }
