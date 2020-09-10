@@ -27,12 +27,38 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    //private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Bank bankName = Bank.createBank("Nice bank");
+        Bank bank = Bank.createBank("Nice bank");
 
+        //Create branches & customers
+
+        Branch westernBranch = new Branch("Western branch", bank);
+        Branch southernBranch = new Branch("Southern branch", bank);
+
+        bank.addBranch(westernBranch);
+        bank.addBranch(southernBranch);
+
+        System.out.println("Nice Bank has branches:");
+        for (int i=0; i<bank.getBranches().size(); i++){
+            System.out.println(bank.getBranches().get(i).getName());
+        }
+
+        Customer Bob = new Customer("Bob");
+        Customer Tom = new Customer("Tom");
+
+        System.out.println("");
+
+        // Add Customers to branches
+
+    /*    westernBranch.addCustomer(Bob);
+        southernBranch.addCustomer(Tom);*/
+
+
+
+        /*
         boolean quit = false;
         while(!quit){
 
@@ -96,5 +122,7 @@ public class Main {
         int action = scanner.nextInt();
         scanner.nextLine();
         return action;
+
+         */
     }
 }

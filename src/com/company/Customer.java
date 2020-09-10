@@ -10,8 +10,4 @@ public class Customer {
         this.name = name;
         this.transactions = new ArrayList<Double>();
     }
-
-    public Customer createCustomer(String name){
-        return new Customer(name);
-    }
 }
