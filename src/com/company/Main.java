@@ -64,7 +64,13 @@ public class Main {
         System.out.println("Customers of Western:");
 
         for (int i=0; i<westernBranch.getCustomers().size(); i++){
+            System.out.println("------------------------ Transactions -----");
             System.out.println(westernBranch.getCustomers().get(i).getName());
+        //Print transactions each customer
+            for (int j=0; j<westernBranch.getCustomers().get(i).getTransactions().size(); j++){
+                System.out.println(westernBranch.getCustomers().get(i).getTransactions().get(j));
+            }
+            System.out.println("------------------------");
         }
 
 
