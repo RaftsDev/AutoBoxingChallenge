@@ -65,8 +65,9 @@ public class Main {
 
 
         //Print customers and transactions
-        printBranchCustomers(westernBranch);
-        printBranchCustomers(southernBranch);
+
+      /*  printBranchCustomers(westernBranch);
+        printBranchCustomers(southernBranch);*/
 
         // Add transactions
 
@@ -76,7 +77,8 @@ public class Main {
         Bob.addTransaction(bobDeposit);
         Bob.addTransaction(bobCharge);
 
-        System.out.println("Bob transaction:"+Bob.getTransactions().get(0));
+        printBranchCustomers(westernBranch);
+        printBranchCustomers(southernBranch);
 
 
         /*
@@ -153,12 +155,16 @@ public class Main {
 
         for (int i=0; i<branch.getCustomers().size(); i++){
             Customer currentCustomer = branch.getCustomers().get(i);
-            System.out.println("------------------------ Transactions -----");
+            System.out.println("------ Transactions -----");
             System.out.println(currentCustomer.getName());
             //Print transactions each customer
-            for (int j=0; j<currentCustomer.getTransactions().size(); j++){
-                System.out.println(currentCustomer.getTransactions().get(j));
+
+            if(currentCustomer.getTransactions().size()>0){
+                for (int j=0; j<currentCustomer.getTransactions().size(); j++){
+                    System.out.println("       "+currentCustomer.getTransactions().get(j));
+                }
             }
+
             System.out.println("------------------------");
         }
     }
