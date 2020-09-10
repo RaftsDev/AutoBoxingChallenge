@@ -49,12 +49,13 @@ public class Main {
         Customer Bob = new Customer("Bob");
         Customer Tom = new Customer("Tom");
 
+
         System.out.println("");
 
         // Add Customers to branches
 
-    /*    westernBranch.addCustomer(Bob);
-        southernBranch.addCustomer(Tom);*/
+        westernBranch.addCustomer(Bob);
+        southernBranch.addCustomer(Tom);
 
 
 

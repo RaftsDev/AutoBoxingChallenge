@@ -8,6 +8,7 @@ public class Branch {
 
     public Branch(String name, Bank bankName) {
         this.name = name;
+        this.customers = new ArrayList<Customer>();
     }
 
     public String getName() {

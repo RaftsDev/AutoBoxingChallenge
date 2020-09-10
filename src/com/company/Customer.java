@@ -10,4 +10,5 @@ public class Customer {
         this.name = name;
         this.transactions = new ArrayList<Double>();
     }
+
 }
