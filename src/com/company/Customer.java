@@ -11,4 +11,11 @@ public class Customer {
         this.transactions = new ArrayList<Double>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Double> getTransactions() {
+        return transactions;
+    }
 }

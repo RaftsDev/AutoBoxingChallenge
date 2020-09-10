@@ -47,7 +47,9 @@ public class Main {
         }
 
         Customer Bob = new Customer("Bob");
+        Customer Mike = new Customer("Mike");
         Customer Tom = new Customer("Tom");
+        Customer Bill = new Customer("Bill");
 
 
         System.out.println("");
@@ -56,6 +58,14 @@ public class Main {
 
         westernBranch.addCustomer(Bob);
         southernBranch.addCustomer(Tom);
+        westernBranch.addCustomer(Mike);
+        southernBranch.addCustomer(Bill);
+
+        System.out.println("Customers of Western:");
+
+        for (int i=0; i<westernBranch.getCustomers().size(); i++){
+            System.out.println(westernBranch.getCustomers().get(i).getName());
+        }
 
 
 
