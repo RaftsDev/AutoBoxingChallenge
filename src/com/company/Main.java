@@ -76,6 +76,8 @@ public class Main {
         Bob.addTransaction(bobDeposit);
         Bob.addTransaction(bobCharge);
 
+        System.out.println("Bob transaction:"+Bob.getTransactions().get(0));
+
 
         /*
         boolean quit = false;
@@ -150,11 +152,12 @@ public class Main {
         System.out.println("Customers of Western:");
 
         for (int i=0; i<branch.getCustomers().size(); i++){
+            Customer currentCustomer = branch.getCustomers().get(i);
             System.out.println("------------------------ Transactions -----");
-            System.out.println(branch.getCustomers().get(i).getName());
+            System.out.println(currentCustomer.getName());
             //Print transactions each customer
-            for (int j=0; j<branch.getCustomers().get(i).getTransactions().size(); j++){
-                System.out.println(branch.getCustomers().get(i).getTransactions().get(j));
+            for (int j=0; j<currentCustomer.getTransactions().size(); j++){
+                System.out.println(currentCustomer.getTransactions().get(j));
             }
             System.out.println("------------------------");
         }
