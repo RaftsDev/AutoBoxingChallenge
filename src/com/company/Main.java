@@ -29,6 +29,8 @@ public class Main {
 
     //private static Scanner scanner = new Scanner(System.in);
 
+
+
     public static void main(String[] args) {
 
         Bank bank = Bank.createBank("Nice bank");
@@ -61,18 +63,18 @@ public class Main {
         westernBranch.addCustomer(Mike);
         southernBranch.addCustomer(Bill);
 
-        System.out.println("Customers of Western:");
 
-        for (int i=0; i<westernBranch.getCustomers().size(); i++){
-            System.out.println("------------------------ Transactions -----");
-            System.out.println(westernBranch.getCustomers().get(i).getName());
-        //Print transactions each customer
-            for (int j=0; j<westernBranch.getCustomers().get(i).getTransactions().size(); j++){
-                System.out.println(westernBranch.getCustomers().get(i).getTransactions().get(j));
-            }
-            System.out.println("------------------------");
-        }
+        //Print customers and transactions
+        printBranchCustomers(westernBranch);
+        printBranchCustomers(southernBranch);
 
+        // Add transactions
+
+        double bobDeposit = 100.00;
+        double bobCharge = -70.00;
+
+        Bob.addTransaction(bobDeposit);
+        Bob.addTransaction(bobCharge);
 
 
         /*
@@ -141,5 +143,20 @@ public class Main {
         return action;
 
          */
+    }
+
+    public static void printBranchCustomers(Branch branch){
+
+        System.out.println("Customers of Western:");
+
+        for (int i=0; i<branch.getCustomers().size(); i++){
+            System.out.println("------------------------ Transactions -----");
+            System.out.println(branch.getCustomers().get(i).getName());
+            //Print transactions each customer
+            for (int j=0; j<branch.getCustomers().get(i).getTransactions().size(); j++){
+                System.out.println(branch.getCustomers().get(i).getTransactions().get(j));
+            }
+            System.out.println("------------------------");
+        }
     }
 }
