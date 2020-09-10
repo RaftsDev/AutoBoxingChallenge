@@ -37,7 +37,7 @@ public class Main {
         while(!quit){
 
             int action = printOptions();
-            System.out.println("action:"+action);
+            //System.out.println("action:"+action);
 
             switch(action){
                 case 0://create a Branch
@@ -48,6 +48,12 @@ public class Main {
                     bankName.addBranch(branchName);
                     break;
                 case 1://create a Customer
+                    System.out.println("You want to create a customer\n" +
+                            "type the name of customer:");
+                    name = scanner.nextLine();
+                    System.out.println("Type the name of branch:");
+                    String tempBranchName = scanner.nextLine();
+
 
                     break;
                 case 2:
