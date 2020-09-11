@@ -25,7 +25,10 @@ public class Bank {
     }
 
     public ArrayList<Branch> getBranches() {
-
         return branches;
+    }
+
+    public String getName() {
+        return name;
     }
 }

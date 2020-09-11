@@ -43,10 +43,11 @@ public class Main {
         bank.addBranch(westernBranch);
         bank.addBranch(southernBranch);
 
-        System.out.println("Nice Bank has branches:");
-        for (int i=0; i<bank.getBranches().size(); i++){
+        printBranches(bank);
+//        System.out.println("Nice Bank has branches:");
+       /* for (int i=0; i<bank.getBranches().size(); i++){
             System.out.println(bank.getBranches().get(i).getName());
-        }
+        }*/
 
         /*Customer Bob = new Customer("Bob");
         Customer Mike = new Customer("Mike");
@@ -169,6 +170,13 @@ public class Main {
         return action;
 
          */
+    }
+
+    public static void printBranches(Bank bank){
+        System.out.println("Bank "+bank.getName()+" has branches:");
+        for (int i=0; i<bank.getBranches().size(); i++){
+            System.out.println(bank.getBranches().get(i).getName());
+        }
     }
 
     public static void printBranchCustomers(Branch branch){
