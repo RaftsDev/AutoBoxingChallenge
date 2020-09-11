@@ -79,6 +79,19 @@ public class Main {
        /* Bob.addTransaction(bobDeposit);
         Bob.addTransaction(bobCharge);*/
 
+        if(!westernBranch.addTransaction("Bob", -70.00)){
+            System.out.println("No customer with this name");
+        };
+        if(!westernBranch.addTransaction("Mike",-50.00)){
+            System.out.println("No customer with this name");
+        }
+        if(!westernBranch.addTransaction("Tom",-50.00)){
+            System.out.println("No customer with this name");
+        }
+
+
+
+
         printBranchCustomers(westernBranch);
         printBranchCustomers(southernBranch);
 
