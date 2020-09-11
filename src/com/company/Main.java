@@ -48,21 +48,26 @@ public class Main {
             System.out.println(bank.getBranches().get(i).getName());
         }
 
-        Customer Bob = new Customer("Bob");
+        /*Customer Bob = new Customer("Bob");
         Customer Mike = new Customer("Mike");
         Customer Tom = new Customer("Tom");
-        Customer Bill = new Customer("Bill");
+        Customer Bill = new Customer("Bill");*/
+
+        bank.addCustomer(westernBranch,"Bob",100.00);
+        bank.addCustomer(westernBranch,"Mike",70.00);
+        bank.addCustomer(southernBranch,"Tom",50.00);
+        bank.addCustomer(southernBranch,"Bill",30.00);
 
 
         System.out.println("");
 
         // Add Customers to branches
 
-        westernBranch.addCustomer(Bob);
+       /* westernBranch.addCustomer(Bob);
         southernBranch.addCustomer(Tom);
         westernBranch.addCustomer(Mike);
         southernBranch.addCustomer(Bill);
-
+*/
 
         //Print customers and transactions
 
@@ -71,11 +76,8 @@ public class Main {
 
         // Add transactions
 
-        double bobDeposit = 100.00;
-        double bobCharge = -70.00;
-
-        Bob.addTransaction(bobDeposit);
-        Bob.addTransaction(bobCharge);
+       /* Bob.addTransaction(bobDeposit);
+        Bob.addTransaction(bobCharge);*/
 
         printBranchCustomers(westernBranch);
         printBranchCustomers(southernBranch);

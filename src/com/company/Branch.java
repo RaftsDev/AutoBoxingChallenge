@@ -23,4 +23,22 @@ public class Branch {
         return customers;
     }
 
+    public boolean addTransaction(String name, double amount){
+        Customer customer = findCustomer(name);
+        if(!(customer == null)){
+            customer.addTransaction(amount);
+        }
+        return false;
+    }
+
+    private Customer findCustomer(String name){
+        for(int i = 0; i < this.getCustomers().size(); i++){
+            Customer currentCustomer = this.getCustomers().get(i);
+            if (currentCustomer.getName().equals(name)){
+                return currentCustomer;
+            }
+        }
+        return null;
+    }
+
 }
