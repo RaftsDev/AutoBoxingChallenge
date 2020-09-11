@@ -27,6 +27,7 @@ public class Branch {
         Customer customer = findCustomer(name);
         if(!(customer == null)){
             customer.addTransaction(amount);
+            return true;
         }
         return false;
     }

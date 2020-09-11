@@ -79,7 +79,9 @@ public class Main {
        /* Bob.addTransaction(bobDeposit);
         Bob.addTransaction(bobCharge);*/
 
-        if(!westernBranch.addTransaction("Bob", -70.00)){
+
+
+       /* if(!westernBranch.addTransaction("Bob", -70.00)){
             System.out.println("No customer with this name");
         };
         if(!westernBranch.addTransaction("Mike",-50.00)){
@@ -87,7 +89,12 @@ public class Main {
         }
         if(!westernBranch.addTransaction("Tom",-50.00)){
             System.out.println("No customer with this name");
-        }
+        }*/
+
+        addTransaction(westernBranch,"Bob", -70.00);
+        addTransaction(westernBranch,"Mike", -55.00);
+        addTransaction(westernBranch,"Tom", -50.00);
+
 
 
 
@@ -182,5 +189,12 @@ public class Main {
 
             System.out.println("------------------------");
         }
+    }
+    private static boolean addTransaction(Branch branch, String name,double amount){
+        if(!branch.addTransaction(name, amount)){
+            System.out.println("No customer with this name: "+name);
+            return  false;
+        };
+        return true;
     }
 }
