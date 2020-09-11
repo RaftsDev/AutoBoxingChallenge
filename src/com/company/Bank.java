@@ -19,9 +19,13 @@ public class Bank {
         this.branches.add(branchName);
     }
 
-    public void addCustomer(Branch branchName, String customer, double initialAmount ){
+    public boolean addCustomer(Branch branchName, String customer, double initialAmount ){
+        if(initialAmount<=0){
+            return false;
+        }
         Customer newCustomer = new Customer(customer, initialAmount);
         branchName.addCustomer(newCustomer);
+        return true;
     }
 
     public ArrayList<Branch> getBranches() {

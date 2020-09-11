@@ -44,23 +44,33 @@ public class Main {
         bank.addBranch(southernBranch);
 
         printBranches(bank);
-//        System.out.println("Nice Bank has branches:");
-       /* for (int i=0; i<bank.getBranches().size(); i++){
-            System.out.println(bank.getBranches().get(i).getName());
-        }*/
 
-        /*Customer Bob = new Customer("Bob");
-        Customer Mike = new Customer("Mike");
-        Customer Tom = new Customer("Tom");
-        Customer Bill = new Customer("Bill");*/
+        //Initial transactions
 
-        bank.addCustomer(westernBranch,"Bob",100.00);
+        addCustomer(bank, westernBranch, "Bob", 100);
+        addCustomer(bank, westernBranch, "Mike", 70);
+        addCustomer(bank, southernBranch, "Tom", 50);
+        addCustomer(bank, southernBranch, "Bill", 30);
+        //Validation fake initial amount
+        addCustomer(bank, westernBranch, "Donald", 0);
+
+        /*bank.addCustomer(westernBranch,"Bob",100.00);
         bank.addCustomer(westernBranch,"Mike",70.00);
         bank.addCustomer(southernBranch,"Tom",50.00);
-        bank.addCustomer(southernBranch,"Bill",30.00);
+        bank.addCustomer(southernBranch,"Bill",30.00);*/
+        //Validation fake initial amount
+        //bank.addCustomer(southernBranch, "Donald", 0);
+
+        //Additional transactions
+
+        addTransaction(westernBranch,"Bob", -70.00);
+        addTransaction(westernBranch,"Mike", -55.00);
+        //Validation fake customer
+        addTransaction(westernBranch,"Tom", -50.00);
 
 
-        System.out.println("");
+        printBranchCustomers(westernBranch);
+        printBranchCustomers(southernBranch);
 
         // Add Customers to branches
 
@@ -79,29 +89,6 @@ public class Main {
 
        /* Bob.addTransaction(bobDeposit);
         Bob.addTransaction(bobCharge);*/
-
-
-
-       /* if(!westernBranch.addTransaction("Bob", -70.00)){
-            System.out.println("No customer with this name");
-        };
-        if(!westernBranch.addTransaction("Mike",-50.00)){
-            System.out.println("No customer with this name");
-        }
-        if(!westernBranch.addTransaction("Tom",-50.00)){
-            System.out.println("No customer with this name");
-        }*/
-
-        addTransaction(westernBranch,"Bob", -70.00);
-        addTransaction(westernBranch,"Mike", -55.00);
-        addTransaction(westernBranch,"Tom", -50.00);
-
-
-
-
-
-        printBranchCustomers(westernBranch);
-        printBranchCustomers(southernBranch);
 
 
         /*
@@ -198,11 +185,15 @@ public class Main {
             System.out.println("------------------------");
         }
     }
-    private static boolean addTransaction(Branch branch, String name,double amount){
+
+    private static void addCustomer(Bank bank, Branch branch, String name, double amount){
+        if(!bank.addCustomer(branch, name, amount)){
+            System.out.println("Suppose to put some money mr. "+name);
+        }
+    }
+    private static void addTransaction(Branch branch, String name,double amount){
         if(!branch.addTransaction(name, amount)){
             System.out.println("No customer with this name: "+name);
-            return  false;
         };
-        return true;
     }
 }
